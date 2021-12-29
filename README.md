@@ -32,6 +32,14 @@ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/so
 apt update
 apt install kubectl
 ```
+Test if kubernetes is working 
+
+```
+kubectl get all
+```
+
+![image](https://user-images.githubusercontent.com/42948627/147674243-29e3a795-993c-4143-a83d-6ce66ed02842.png)
+
 
 ## References
 
