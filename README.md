@@ -95,10 +95,12 @@ http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 To find token login press;
 
 ```
-kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep loja-admin | aws'{print $ 1}')
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep loja-admin | awk '{print $1}')
 ```
 
-Choose one and place it on token login and enter;
+Choose loja-admin and place it on token and enter;
+![image](https://user-images.githubusercontent.com/42948627/147776918-5fc70522-0b71-4433-9d3d-afe54fcc8945.png)
+
 
 ![image](https://user-images.githubusercontent.com/42948627/147765821-4b5597a1-ae13-44df-9bf2-712661fc26bf.png)
 
