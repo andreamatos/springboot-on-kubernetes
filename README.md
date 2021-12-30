@@ -40,7 +40,6 @@ kubectl get all
 
 ![image](https://user-images.githubusercontent.com/42948627/147674243-29e3a795-993c-4143-a83d-6ce66ed02842.png)
 
-
 ## Create Default Service, User and deployments 
 
 ```
@@ -71,6 +70,14 @@ subjects:
   name: loja-admin
   namespace: kube-system
 ```
+
+## Access Kubernetes dashboard
+
+The path to access kubernetes dashboard;
+
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+
+
 
 ## References
 
