@@ -105,6 +105,16 @@ Choose loja-admin and place it on token and enter;
 ![image](https://user-images.githubusercontent.com/42948627/147765821-4b5597a1-ae13-44df-9bf2-712661fc26bf.png)
 
 
+## Create Postgres Pod
+
+Create deployment definition;
+
+kubectl create -f postgres-deployments.yaml
+
+kubectl create -f postgres-service.yaml
+
+kubectl create -f postgres-service.yaml
+
 ## References
 
 https://www.amazon.com.br/gp/product/B08ZWQ6YMB/ref=ppx_yo_dt_b_d_asin_title_o00?ie=UTF8&psc=1
