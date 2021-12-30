@@ -40,11 +40,15 @@ kubectl get all
 
 ![image](https://user-images.githubusercontent.com/42948627/147674243-29e3a795-993c-4143-a83d-6ce66ed02842.png)
 
+
 ## Create Default Service, User and deployments 
 
 ```
 kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta6/aio/deploy/recommended.yaml
 ```
+
+![image](https://user-images.githubusercontent.com/42948627/147764725-158a00df-086f-426f-bf64-d917fed11da9.png)
+
 
 ## Create authentication
 
@@ -71,12 +75,13 @@ subjects:
   namespace: kube-system
 ```
 
-## Access Kubernetes dashboard
+## Start Kubernetes Dashboard
 
-The path to access kubernetes dashboard;
+```
+kubectl proxy
+```
 
-http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
-
+![image](https://user-images.githubusercontent.com/42948627/147764876-649ff947-504e-4d35-9ca1-6e043776d3ca.png)
 
 
 ## References
