@@ -84,6 +84,25 @@ kubectl proxy
 ![image](https://user-images.githubusercontent.com/42948627/147764876-649ff947-504e-4d35-9ca1-6e043776d3ca.png)
 
 
+## Access Kubernetes Dashboard
+
+The path to access;
+
+http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+
+![image](https://user-images.githubusercontent.com/42948627/147765685-a6f0ab20-4397-48fd-8579-fca1d44161ac.png)
+
+To find token login press;
+
+```
+kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep loja-admin | aws'{print $ 1}')
+```
+
+Choose one and place it on token login and enter;
+
+![image](https://user-images.githubusercontent.com/42948627/147765821-4b5597a1-ae13-44df-9bf2-712661fc26bf.png)
+
+
 ## References
 
 https://www.amazon.com.br/gp/product/B08ZWQ6YMB/ref=ppx_yo_dt_b_d_asin_title_o00?ie=UTF8&psc=1
