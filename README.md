@@ -107,13 +107,64 @@ Choose loja-admin and place it on token and enter;
 
 ## Create Postgres Pod
 
-Create deployment definition;
-
 kubectl create -f postgres-deployments.yaml
 
-kubectl create -f postgres-service.yaml
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+    app: postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - name: postgres
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
+        env:
+          - name: POSTGRES_USER
+            value: postgres
+          - name: POSTGRES_DB
+            value: dev
+          - name: POSTGRES_PASSWORD
+            value: postgres
+```
 
 kubectl create -f postgres-service.yaml
+
+```
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgres
+  labels:
+    run: postgres
+spec:
+  ports:
+    - port: 5432
+      targetPort: 5432
+      protocol: TCP
+  selector:
+    app: postgres
+```
+
+Postgres Pod is running;
+
+![image](https://user-images.githubusercontent.com/42948627/147789470-b1de4e97-d0dd-40cc-bc01-9f81c024e814.png)
+
+To path postgres to OS access;
+
+kubectl port-foward svc/postgres 5000:5432
 
 ## References
 
