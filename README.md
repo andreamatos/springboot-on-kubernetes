@@ -32,6 +32,14 @@ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | tee -a /etc/apt/so
 apt update
 apt install kubectl
 ```
+Test if kubernetes is working 
+
+```
+kubectl get all
+```
+
+![image](https://user-images.githubusercontent.com/42948627/147674243-29e3a795-993c-4143-a83d-6ce66ed02842.png)
+
 
 ## Create Default Service, User and deployments 
 
@@ -73,5 +81,6 @@ https://dev.to/techworld_with_nana/what-is-minikube-and-kubectl-setup-a-minikube
 https://kubernetes.io/docs/tasks/tools/#install-kubectl-on-linux
 
 https://askubuntu.com/questions/944920/how-do-i-delete-sources-list-d-and-add-install-it-again
+
 
 https://stackoverflow.com/questions/47695369/kubernete-dashboard-is-not-deploying
