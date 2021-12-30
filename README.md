@@ -158,6 +158,19 @@ spec:
     app: postgres
 ```
 
+kubectl create -f config-map.yaml
+
+```
+kind: ConfigMap 
+apiVersion: v1 
+metadata:
+  name: postgres-configmap 
+data:
+  database_url: jdbc:postgresql://postgres:5432/dev
+  database_user: postgres
+  database_password: postgres
+```
+
 Postgres Pod is running;
 
 ![image](https://user-images.githubusercontent.com/42948627/147789470-b1de4e97-d0dd-40cc-bc01-9f81c024e814.png)
