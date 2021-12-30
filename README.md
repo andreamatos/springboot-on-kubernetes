@@ -164,7 +164,11 @@ Postgres Pod is running;
 
 To path postgres to OS access;
 
-kubectl port-foward svc/postgres 5000:5432
+```
+kubectl port-forward svc/postgres 5000:5432
+```
+
+![image](https://user-images.githubusercontent.com/42948627/147789941-7c99a49a-7a4c-47ea-9780-8fd2f919ace6.png)
 
 ## References
 
