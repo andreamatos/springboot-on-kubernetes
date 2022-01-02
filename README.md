@@ -183,6 +183,94 @@ kubectl port-forward svc/postgres 5000:5432
 
 ![image](https://user-images.githubusercontent.com/42948627/147789941-7c99a49a-7a4c-47ea-9780-8fd2f919ace6.png)
 
+## Create api pod
+
+On Terminal path springboot-on-kubernetes/product-api type;
+
+```
+mvn dockerfile:build
+```
+
+result;
+
+```
+[INFO] Image will be built as loja/product-api:latest
+[INFO] 
+[INFO] Step 1/5 : FROM openjdk:8-jdk-alpine
+[INFO] 
+[INFO] Pulling from library/openjdk
+[INFO] Digest: sha256:94792824df2df33402f201713f932b58cb9de94a0cd524164a0f2283343547b3
+[INFO] Status: Image is up to date for openjdk:8-jdk-alpine
+[INFO]  ---> a3562aa0b991
+[INFO] Step 2/5 : VOLUME /tmp
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> 9879ec2eea38
+[INFO] Step 3/5 : ARG JAR_FILE=target/product-api-0.0.1.jar
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> b021b1862223
+[INFO] Step 4/5 : COPY ${JAR_FILE} app.jar
+[INFO] 
+[INFO]  ---> 428a6a410383
+[INFO] Step 5/5 : ENTRYPOINT ["java","-jar","/app.jar"]
+[INFO] 
+[INFO]  ---> Running in ef6363c8af13
+[INFO] Removing intermediate container ef6363c8af13
+[INFO]  ---> e0abbb66888a
+[INFO] Successfully built e0abbb66888a
+[INFO] Successfully tagged loja/product-api:latest
+[INFO] 
+[INFO] Detected build of image with id e0abbb66888a
+[INFO] Building jar: /home/andre/projetos/springboot-on-kubernetes/product-api/target/product-api-0.0.1-docker-info.jar
+[INFO] Successfully built loja/product-api:latest
+
+```
+On Terminal path springboot-on-kubernetes/shopping-api type;
+
+```
+mvn dockerfile:build
+```
+
+result;
+
+```
+[INFO] Image will be built as loja/shopping-api:latest
+[INFO] 
+[INFO] Step 1/5 : FROM openjdk:8-jdk-alpine
+[INFO] 
+[INFO] Pulling from library/openjdk
+[INFO] Digest: sha256:94792824df2df33402f201713f932b58cb9de94a0cd524164a0f2283343547b3
+[INFO] Status: Image is up to date for openjdk:8-jdk-alpine
+[INFO]  ---> a3562aa0b991
+[INFO] Step 2/5 : VOLUME /tmp
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> 9879ec2eea38
+[INFO] Step 3/5 : ARG JAR_FILE=target/shopping-api-0.0.1.jar
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> d7d56be60d4d
+[INFO] Step 4/5 : COPY ${JAR_FILE} app.jar
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> c5d41af3415e
+[INFO] Step 5/5 : ENTRYPOINT ["java","-jar","/app.jar"]
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> 9ff74adb4e55
+[INFO] Successfully built 9ff74adb4e55
+[INFO] Successfully tagged loja/shopping-api:latest
+[INFO] 
+[INFO] Detected build of image with id 9ff74adb4e55
+[INFO] Building jar: /home/andre/projetos/springboot-on-kubernetes/shopping-api/target/shopping-api-0.0.1-docker-info.jar
+[INFO] Successfully built loja/shopping-api:latest
+
+```
+
+![image](https://user-images.githubusercontent.com/42948627/147883907-02914205-32f6-4481-9169-46d999879f3d.png)
+
+
 ## References
 
 https://www.amazon.com.br/gp/product/B08ZWQ6YMB/ref=ppx_yo_dt_b_d_asin_title_o00?ie=UTF8&psc=1
@@ -192,6 +280,5 @@ https://dev.to/techworld_with_nana/what-is-minikube-and-kubectl-setup-a-minikube
 https://kubernetes.io/docs/tasks/tools/#install-kubectl-on-linux
 
 https://askubuntu.com/questions/944920/how-do-i-delete-sources-list-d-and-add-install-it-again
-
 
 https://stackoverflow.com/questions/47695369/kubernete-dashboard-is-not-deploying
