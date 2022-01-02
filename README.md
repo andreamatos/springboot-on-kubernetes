@@ -308,12 +308,13 @@ result;
 [INFO] Building jar: /home/andre/projetos/springboot-on-kubernetes/user-api/target/user-api-0.0.1-docker-info.jar
 [INFO] Successfully built loja/user-api:latest
 ```
-
 List docker image;
 
 ```
 docker image ls
 ```
+
+![image](https://user-images.githubusercontent.com/42948627/147886155-59fa9287-55bd-4e63-b134-9532b7d569b7.png)
 
 ## Run created api images
 
@@ -352,8 +353,6 @@ user_1      |   '  |____| .__|_| |_|_| |_\__, | / / / /
 user_1      |  =========|_|==============|___/=/_/_/_/
 user_1      |  :: Spring Boot ::        (v2.3.0.RELEASE)
 ```
-
-![image](https://user-images.githubusercontent.com/42948627/147886155-59fa9287-55bd-4e63-b134-9532b7d569b7.png)
 
 ## References
 
