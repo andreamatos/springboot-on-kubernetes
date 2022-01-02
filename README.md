@@ -268,14 +268,54 @@ result;
 
 ```
 
+On Terminal path springboot-on-kubernetes/user-api type;
+
+```
+mvn dockerfile:build
+```
+
+result;
+
+```
+[INFO] Image will be built as loja/user-api:latest
+[INFO] 
+[INFO] Step 1/5 : FROM openjdk:8-jdk-alpine
+[INFO] 
+[INFO] Pulling from library/openjdk
+[INFO] Digest: sha256:94792824df2df33402f201713f932b58cb9de94a0cd524164a0f2283343547b3
+[INFO] Status: Image is up to date for openjdk:8-jdk-alpine
+[INFO]  ---> a3562aa0b991
+[INFO] Step 2/5 : VOLUME /tmp
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> 9879ec2eea38
+[INFO] Step 3/5 : ARG JAR_FILE=target/user-api-0.0.1.jar
+[INFO] 
+[INFO]  ---> Using cache
+[INFO]  ---> 8840f8475ad9
+[INFO] Step 4/5 : COPY ${JAR_FILE} app.jar
+[INFO] 
+[INFO]  ---> 62a2f2beaa9f
+[INFO] Step 5/5 : ENTRYPOINT ["java","-jar","/app.jar"]
+[INFO] 
+[INFO]  ---> Running in fcf2bdacc34c
+[INFO] Removing intermediate container fcf2bdacc34c
+[INFO]  ---> ae7d438519fa
+[INFO] Successfully built ae7d438519fa
+[INFO] Successfully tagged loja/user-api:latest
+[INFO] 
+[INFO] Detected build of image with id ae7d438519fa
+[INFO] Building jar: /home/andre/projetos/springboot-on-kubernetes/user-api/target/user-api-0.0.1-docker-info.jar
+[INFO] Successfully built loja/user-api:latest
+```
+
 List docker image;
 
 ```
 docker image ls
 ```
 
-![image](https://user-images.githubusercontent.com/42948627/147883907-02914205-32f6-4481-9169-46d999879f3d.png)
-
+![image](https://user-images.githubusercontent.com/42948627/147886155-59fa9287-55bd-4e63-b134-9532b7d569b7.png)
 
 ## References
 
