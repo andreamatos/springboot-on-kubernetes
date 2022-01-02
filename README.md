@@ -268,7 +268,7 @@ result;
 
 ```
 
-Then;
+List docker image;
 
 ```
 docker image ls
