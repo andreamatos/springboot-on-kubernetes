@@ -315,6 +315,44 @@ List docker image;
 docker image ls
 ```
 
+## Run created api images
+
+```
+docker-compose up
+```
+
+```
+product_1   |   .   ____          _            __ _ _
+product_1   |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+product_1   | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+product_1   |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+product_1   |   '  |____| .__|_| |_|_| |_\__, | / / / /
+product_1   |  =========|_|==============|___/=/_/_/_/
+product_1   |  :: Spring Boot ::        (v2.3.0.RELEASE)
+product_1   | 
+postgres_1  | 2022-01-02 18:51:25.540 UTC [63] LOG:  database system was shut down at 2022-01-02 18:51:25 UTC
+postgres_1  | 2022-01-02 18:51:25.548 UTC [1] LOG:  database system is ready to accept connections
+product_1   | 2022-01-02 18:51:25.746  INFO 1 --- [           main] com.santana.java.back.end.App            : Starting App v0.0.1 on 0f0f3e567f7c with PID 1 (/app.jar started by root in /)
+product_1   | 2022-01-02 18:51:25.753  INFO 1 --- [           main] com.santana.java.back.end.App            : No active profile set, falling back to default profiles: default
+shopping_1  | 
+shopping_1  |   .   ____          _            __ _ _
+shopping_1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+shopping_1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+shopping_1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+shopping_1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+shopping_1  |  =========|_|==============|___/=/_/_/_/
+shopping_1  |  :: Spring Boot ::        (v2.3.0.RELEASE)
+shopping_1  | 
+user_1      | 
+user_1      |   .   ____          _            __ _ _
+user_1      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+user_1      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+user_1      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+user_1      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+user_1      |  =========|_|==============|___/=/_/_/_/
+user_1      |  :: Spring Boot ::        (v2.3.0.RELEASE)
+```
+
 ![image](https://user-images.githubusercontent.com/42948627/147886155-59fa9287-55bd-4e63-b134-9532b7d569b7.png)
 
 ## References
