@@ -268,6 +268,12 @@ result;
 
 ```
 
+Then;
+
+```
+docker image ls
+```
+
 ![image](https://user-images.githubusercontent.com/42948627/147883907-02914205-32f6-4481-9169-46d999879f3d.png)
 
 
