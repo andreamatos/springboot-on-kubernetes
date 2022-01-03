@@ -16,9 +16,11 @@ wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd6
 chmod +x minikube-linux-amd64
 mv minikube-linux-amd64 /usr/local/bin/minikube
 minikube version
+minikube config set cpus 4
+minikube config set memory 15368
 minikube start
 ```
-![image](https://user-images.githubusercontent.com/42948627/147616579-37eee47f-66b2-462f-abe4-dcb19e77d008.png)
+![image](https://user-images.githubusercontent.com/42948627/147942099-b2a54757-c3d9-46a5-873f-e3100185eaa2.png)
 
 ## Install Kubenetes
 
