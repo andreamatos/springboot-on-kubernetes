@@ -185,7 +185,7 @@ kubectl port-forward svc/postgres 5000:5432
 
 ![image](https://user-images.githubusercontent.com/42948627/147789941-7c99a49a-7a4c-47ea-9780-8fd2f919ace6.png)
 
-## Create api pod
+## Create api images
 
 On Terminal path springboot-on-kubernetes/product-api type;
 
@@ -318,7 +318,19 @@ docker image ls
 
 ![image](https://user-images.githubusercontent.com/42948627/147886155-59fa9287-55bd-4e63-b134-9532b7d569b7.png)
 
-## Run created api images
+## After created images, create api POD
+
+On Path user-api/deply, product-api/deply, shopping-api/deploy type;
+
+```
+kubectl create -f configmap.yaml
+kubectl create -f deployment.yaml
+```
+
+![image](https://user-images.githubusercontent.com/42948627/147946525-30e79f8a-bffa-4b8e-806b-ba3d28375a06.png)
+
+
+## Run api images with docker compose
 
 ```
 docker-compose up
