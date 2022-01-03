@@ -329,6 +329,27 @@ kubectl create -f deployment.yaml
 
 ![image](https://user-images.githubusercontent.com/42948627/147946525-30e79f8a-bffa-4b8e-806b-ba3d28375a06.png)
 
+## Access POD from OS
+
+```
+kubectl port-forward svc/user-api 8080:8080
+```
+
+result;
+
+```
+![image](https://user-images.githubusercontent.com/42948627/147949496-92eb0525-f2eb-4c0a-8f70-139da1bb41f9.png)
+
+```
+
+A route for example http://localhost:8080/user/1
+
+result;
+
+```
+![image](https://user-images.githubusercontent.com/42948627/147949547-2cf3f12a-4a9a-428f-bd43-58021b76c323.png)
+
+```
 
 ## Run api images with docker compose
 
