@@ -22,7 +22,7 @@ minikube start
 ```
 ![image](https://user-images.githubusercontent.com/42948627/147942099-b2a54757-c3d9-46a5-873f-e3100185eaa2.png)
 
-## Install Kubenetes
+## Install Kubernetes
 
 To use kubernetes commands install kubectl, on linux the instalation packages doens't
 have an apt default, however follow the step by step;
